@@ -8,12 +8,17 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container > * {
+    display: flex;
 }
 
 .view {
+    background-color: #000;
     height: 30px;
-    display: flex;
-    background-color: #222;
     color: #fff;
     justify-content: flex-end;
     align-items: center;
@@ -21,47 +26,93 @@
 
 .view div {
     padding: 5px;
-    margin-right: 10px ;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #555;
+    line-height: 12px;
 }
 
 .users {
-    display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
     justify-content: center;
     background-color: #000;
-    padding: 50px;
+    padding: 30px 50px;
 }
 
 .users div {
     width: 200px;
     height: 120px;
-    background-color: wheat;
     margin: 5px;
+    background-image: url(../img/profile.jpg);
+    background-size: cover;
+    display: flex;          /*Is absolute positioning better than this?*/
+    align-items: flex-end; 
+}
+
+.users span {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    color: #fff;
 }
 
 .nav-bar {
     height: 80px;
-    background-color: #444;
+    background-color: #222;
+    color: #fff;
+}
+
+.nav-bar > * {
     display: flex;
 }
 
-.self {
-    flex-basis: 200px;
-    background-color: teal;
-    display: flex;
+.fa-angle-up {
+    font-size: 15px;
 }
 
-.actions {
+[class^="col-"] i {
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.fa-share-square {
+    color: #70c63b;
+}
+
+[class$="-flex"] {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.self-flex {
+    flex-basis: 210px;
+    margin-left: 10px;
+}
+
+[class$="-flex"] > div {
+    text-align: center;
+}
+
+.actions-flex {
     flex-grow: 1;
-    background-color: tomato;
-    display: flex;
     justify-content: center;
 }
 
-.exit {
-    flex-basis: 150px;
-    background-color: #666;
-    color: red;
+.actions-flex > div {
+    padding: 0 15px;
 }
 
+.col-chat {
+    margin-left: 20px;
+}
+
+.exit {
+    justify-content: center;
+    align-items: center;
+    flex-basis: 150px;
+    background-color: #444;
+    color: red;
+    font-size: 17px;
+}
